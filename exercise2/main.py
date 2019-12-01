@@ -2,6 +2,6 @@ from city import *
 
 from cities import *
 
-for i in cities :
-    i = City(i)
-    City.show_information(i)
+for informations in cities :
+    i = City(informations) # create object with i
+    City.show_information(i) # display informations of the city

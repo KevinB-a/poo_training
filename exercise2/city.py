@@ -2,7 +2,7 @@ from cities import *
 
 class City :
 
-    def __init__(self, cities):
+    def __init__(self, informations):
         """this method initializes the arguments """
         self.name = None
         self.department = None
@@ -10,10 +10,12 @@ class City :
         self.population = None
         self.mayor = None
         self.capital = None
-        for key_name, value_name in cities.items():
+        self.select_informations(informations)
+
+    def select_informations(self, informations):
+        for key_name, value_name in informations.items():
             if hasattr(self, key_name):
                 setattr(self, key_name, value_name)
-
 
     def show_location(self):
         """this method display the name and department of the city """
